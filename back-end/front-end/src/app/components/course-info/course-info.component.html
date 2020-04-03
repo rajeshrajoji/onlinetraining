@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>Course</h1>
+        <h1><a [routerLink]="['/profile']" class="btn btn-link">Home!</a></h1>
+    </div>
+    <div class="panel-body" *ngIf="courseInfo">
+      <span>{{courseInfo.description}}</span>
+    </div>
+
+    <div class="panel-body" *ngIf="courseInfo">
+        <button (click)="enroll()">Enroll</button>
+    </div>
+
+    <p class="alert alert-success" *ngIf="isEnrolled">
+          <strong>Successfully Enrolled!</strong>
+     </p>
+</div>
